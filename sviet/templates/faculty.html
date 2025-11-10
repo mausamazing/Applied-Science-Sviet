@@ -1,5 +1,7 @@
- {% include 'navbar.html' %}{% block content %} 
- 
+ {% include 'navbar.html' %}{% block content %} {% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}"
+</head> 
  <!-- MATHEMATICS -->
   <section id="math">
     <h2>Mathematics Faculty</h2>
@@ -540,3 +542,4 @@
   <footer>
     <p>&copy; 2025 Applied Science Department | All Rights Reserved</p>
   </footer>
+{% endblock content %}

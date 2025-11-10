@@ -24,13 +24,13 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",views.home,name="home"),
-    path("/faculty", views.faculty,name="faculty"),
-    path("/branch",views.branch,name="branch"),
-    path("/infrastructure", views.infrastructure,name="infrastructure"),
-    path("/aboutus",views.aboutus,name="aboutus"),
-    path("/classrooms",views.classroom,name="classrooms"),
-    path("/committee",views.committee,name="committee"),
-    path("/workshop",views.workshop,name="workshop"),
+    path("faculty/", views.faculty,name="faculty"),
+    path("branch/",views.branch,name="branch"),
+    path("infrastructure/", views.infrastructure,name="infrastructure"),
+    path("aboutus/",views.aboutus,name="aboutus"),
+    path("classrooms/",views.classroom,name="classrooms"),
+    path("committee/",views.committee,name="committee"),
+    path("workshop/",views.workshop,name="workshop"),
     path('',include('serve.urls')),
 ]
 

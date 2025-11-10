@@ -26,9 +26,12 @@
         loading="lazy"
       />
       <span> Branches </span> </a
-    ><a href="{% url 'faculty.html' % " } class="item6">
-      <img src="{ % static 'images/faculty.jpg' %}"" alt="Faculty"
-      loading="lazy">
+    ><a href="{% url 'faculty' %}" class="item6">
+      <img
+        src="{% static 'images/faculty.jpg' %}"
+        alt="Faculty"
+        loading="lazy"
+      />
       <span>Faculty</span>
     </a>
     <a href="{% url 'committee' %}" class="item2">
