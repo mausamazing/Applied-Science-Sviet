@@ -9,6 +9,10 @@ def branch(request):
 def infrastructure(request):
     return render(request,"infrastrucre.html")
 def committee(request):
-    return render(request, "commitee.html")
+    return render(request, "committee.html")
 def workshop(request):
-    return render 
+    return render(request,"workshop.html")
+def aboutus(request):
+    return render(request,"aboutus.html")
+def classroom(request):
+    return render(request,"classroom.html")
