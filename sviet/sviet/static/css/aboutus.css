@@ -1,7 +1,5 @@
-
  /* ====== COLOR SCHEME ====== */
      :root {
-
 /* Base & Background */
 
      --color-bg: #1B263B;        /* Deep cool navy */
@@ -141,10 +139,12 @@
       gap: 20px;
     }
 
-    footer {
+    .footer {
       background: var(--color-bg);
       color: white;
       text-align: center;
       padding: 15px;
       margin-top: 30px;
     }
+
+    
