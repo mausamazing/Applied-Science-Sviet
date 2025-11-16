@@ -1,57 +1,40 @@
 {% block content %} {% load static %}
 
+<head>
 <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
 
 <!-- Collage -->
 <section id="Academics">
   <h2>Academics</h2>
   <div class="grid-collage" id="gallery">
     <a href="{% url 'aboutus' %}" class="item3">
-      <img
-        src="{% static 'images/Aboutus.jpg' %}"
-        alt="About Us"
-        loading="lazy"
-      />
+      <img src="{% static 'images/Aboutus.jpg' %}" alt="About Us" loading="lazy"/>
       <span> About Us </span>
     </a>
+
     <a href="{% url 'classrooms' %}" class="item5">
-      <img
-        src="{% static 'images/classes.jpg' %}"
-        alt="Our Classrooms"
-        loading="lazy"
-      />
+      <img src="{% static 'images/classes.jpg' %}" alt="Our Classrooms" loading="lazy"/>
       <span>Inside Our Department</span>
     </a>
+
     <a href="{% url 'branch' %}" class="item1">
-      <img
-        src="{% static 'images/branchdisplay.jpg' %}"
-        alt="Branches"
-        loading="lazy"
-      />
-      <span> Branches </span> </a
-    ><a href="{% url 'faculty' %}" class="item6">
-      <img
-        src="{% static 'images/faculty.jpg' %}"
-        alt="Faculty"
-        loading="lazy"
-      />
+      <img src="{% static 'images/branchdisplay.jpg' %}" alt="Branches" loading="lazy"/>
+      <span> Branches </span> 
+    </a>
+
+    <a href="{% url 'faculty' %}" class="item6">
+      <img src="{% static 'images/faculty.jpg' %}" alt="Faculty" loading="lazy"/>
       <span>Faculty</span>
     </a>
+
     <a href="{% url 'committee' %}" class="item2">
-      <img
-        src="{% static 'images/gallery2.jpg' %}"
-        alt="Committees"
-        loading="lazy"
-      />
+      <img src="{% static 'images/gallery2.jpg' %}" alt="Committees" loading="lazy"/>
       <span> Committees </span>
     </a>
 
     <a href="{% url 'workshop' %}" class="item4">
-      <img
-        src="{% static 'images/.jpg' %}"
-        alt="Worshop"
-        loading="lazy"
-      />
+      <img src="{% static 'images/.jpg' %}" alt="Worshop" loading="lazy"/>
       <span>Workshop</span>
     </a>
 
