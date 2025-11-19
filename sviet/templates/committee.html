@@ -46,12 +46,12 @@
         <div class="member-card">
           <img src="{% static 'images/english5.jpg' %}" alt="Student 1">
           <h4>Harshita</h4>
-          <p>Website Handler</p>
+          <p>Web Developer</p>
         </div>
         <div class="member-card">
-          <img src="images/nontech4.jpg" alt="Student 2">
+          <img src="{% static 'images/Mausam.jpeg' %}" alt="Mausam">
           <h4>Mausam</h4>
-          <p>Website Handler</p>
+          <p>Web Developer</p>
         </div>
          <div class="member-card">
           <img src="{% static 'images/drone.jpg' %}" alt="Student 3">
@@ -139,7 +139,7 @@
           <p>Core Member</p>
         </div>
         <div class="member-card">
-          <img src="{% static 'images/Mausam.jpg' %}" alt="Student 3">
+          <img src="{% static 'images/Mausam.jpeg' %}" alt="Student 3">
           <h4>Mausam</h4>
           <p>Event Organizer</p>
         </div>
@@ -591,4 +591,5 @@
 
  <script src="{% static 'js/clubs.js' %}"></script>
 
-  {% endblock content %} 
+{% endblock content %}
+{% include 'footer1.html' %} {% include 'footer2.html' %}
