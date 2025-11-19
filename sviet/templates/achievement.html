@@ -1,40 +1,64 @@
 {% block content %} {% load static %}
 
 <head>
-<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 </head>
 
 <!-- ACHIEVEMENTS -->
 <section id="achievements">
   <h2>Departmental Achievements</h2>
-  
-  <div class="achievements-grid">
 
+  <div class="achievements-grid">
     <div class="card1">
-      <img src="{% static 'images/achieve1.jpg' %}" alt="Tug of War" loading="lazy">
+      <div class="img-square">
+        <img
+          src="{% static 'images/achieve1.jpg' %}"
+          alt="Tug of War"
+          loading="lazy"
+        />
+      </div>
       <h3>Tug Of War</h3>
       <p>Won first prize in inter-house competition</p>
     </div>
 
     <div class="card1">
-      <img src="{% static 'images/achieve2.jpg' %}" alt="Research" loading="lazy">
+      <div class="img-square">
+        <img
+          src="{% static 'images/achieve2.jpg' %}"
+          alt="Research"
+          loading="lazy"
+        />
+      </div>
       <h3>Research Published</h3>
-      <p>Published Research paper in Taylor and Francis Group (Scopus Indexed)</p>
+      <p>
+        Published Research paper in Taylor and Francis Group (Scopus Indexed)
+      </p>
     </div>
 
     <div class="card1">
-      <img src="{% static 'images/achieve3.png' %}" alt="Red Romans" loading="lazy">
+      <div class="img-square">
+        <img
+          src="{% static 'images/achieve3.png' %}"
+          alt="Red Romans"
+          loading="lazy"
+        />
+      </div>
       <h3>Red Romans</h3>
       <p>Winners Of Spontania 2K24</p>
     </div>
 
     <div class="card1">
-      <img src="{% static 'images/achieve4.jpg' %}" alt="Spontania 2k25" loading="lazy">
+      <div class="img-square">
+        <img
+          src="{% static 'images/achieve4.jpg' %}"
+          alt="Spontania 2k25"
+          loading="lazy"
+        />
+      </div>
       <h3>Mainly Meal Challenge 2k25</h3>
       <p>Runner Up in the manly meal challenge</p>
     </div>
-
   </div>
 </section>
 
-{% endblock content %} 
+{% endblock content %}

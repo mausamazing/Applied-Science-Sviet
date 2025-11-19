@@ -6,7 +6,7 @@
 
 /* === config: tweak these to change overall sizing === */
 :root {
-    --collage-max-width: 1650px;
+    --collage-max-width: 1450px;
     /* increase to extend About further; set 'none' to remove cap */
     --about-height-desktop: 420px;
     /* desktop about height */
@@ -29,6 +29,33 @@
     grid-template-rows: auto auto;
     row-gap: 24px;
     position: relative;
+}
+
+/* Make the collage more centered and reduce its width for more side space */
+.grid-collage {
+    max-width: 1100px; /* reduce from 1450px to 1100px for more side margin */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* On medium screens, keep it comfortable */
+@media (max-width: 1200px) {
+    .grid-collage {
+        max-width: 92vw;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+/* On small screens, keep the original padding */
+@media (max-width: 700px) {
+    .grid-collage {
+        max-width: 100vw;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 /* ---------- ABOUT TILE (full width) ---------- */
@@ -179,6 +206,44 @@
     opacity: 0.95;
 }
 
+/* Center overlay content for right-grid tiles */
+.right-grid .card-overlay {
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    background: linear-gradient(0deg, rgba(0,0,0,0.68), rgba(0,0,0,0.18) 70%) !important;
+    /* stronger dark for better text contrast */
+    padding: 28px !important;
+    min-height: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Make card titles bigger and bolder */
+.right-grid .card-title {
+    font-size: 2rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.5px;
+    color: #fff !important;
+    text-shadow: 0 4px 18px rgba(0,0,0,0.28), 0 1px 0 #222;
+    margin-bottom: 12px !important;
+}
+
+/* Make card descriptions larger and more readable */
+.right-grid .card-desc {
+    font-size: 1.15rem !important;
+    font-weight: 500;
+    color: #f3f3f3 !important;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    opacity: 1 !important;
+}
+
+/* Optional: add a subtle overlay border for more focus */
+.right-grid a {
+    border: 2.5px solid rgba(255,255,255,0.09);
+    box-shadow: 0 10px 32px rgba(0,0,0,0.18);
+}
+
 /* hover/focus */
 .right-grid a:hover {
     transform: translateY(-6px);
@@ -222,7 +287,7 @@
 /* ---------- Responsive behavior ---------- */
 /* wide but short screens: stack About columns (text then image) */
 @media (orientation: landscape) and (max-height: 820px),
-(max-width: 1100px) {
+(max-width: 1000px) {
     .about-inner {
         grid-template-columns: 1fr;
     }
