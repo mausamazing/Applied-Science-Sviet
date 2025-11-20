@@ -69,6 +69,32 @@
       text-decoration: none;
       outline: none;
     }
+    /* view more button */
+    .view-more-wrap {
+      display: flex;
+      justify-content: center;
+      margin: 26px 0 10px;
+    }
+
+    .view-more-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #cc9d3d, #e0b24a); /* warm gold */
+      color: #07243f; /* deep navy text */
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(11, 36, 64, 0.08);
+      transition: transform 0.18s ease, box-shadow 0.18s ease,
+        opacity 0.18s ease;
+    }
+
+    .view-more-btn:hover,
+    .view-more-btn:focus {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(11, 36, 64, 0.12);
+      opacity: 0.98;
+    }
   </style>
   <h1>{{ title }}</h1>
   <p><a href="{% url 'gallery_index' %}">&larr; Back to categories</a></p>
@@ -98,6 +124,7 @@
       View more photos
     </a>
   </div>
-  {% endif %} {% endblock %} {% include 'footer1.html' %} {% include
-  'footer2.html' %}
+  {% endif %} {% endblock content %}
+  <!--  -->
+  {% include 'footer2.html' %}
 </head>
