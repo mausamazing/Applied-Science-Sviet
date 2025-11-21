@@ -1,4 +1,4 @@
-  * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -54,6 +54,31 @@
         .intro-section p {
             font-size: 1.1em;
             margin-bottom: 10px;
+        }
+
+        .intro-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .intro-section ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: #555;
+        }
+
+        .intro-section ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .intro-section a {
+            color: #0b2440;
+            text-decoration: underline;
         }
 
         .workshops-grid {
@@ -175,4 +200,48 @@
             .benefits-grid {
                 grid-template-columns: 1fr;
             }
+        }
+
+        /* Ensure intro text is readable (dark) */
+        .intro-section,
+        .intro-section h2,
+        .intro-section p,
+        .intro-section ul,
+        .intro-section li {
+            color: #111 !important;
+        }
+
+        /* Strong override: force intro-section text/icons/links to dark so it's visible */
+        header .container .intro-section,
+        header .container .intro-section * {
+          color: #111111 !important;
+          -webkit-text-fill-color: #111111 !important; /* for some browsers */
+          fill: #111111 !important; /* for SVG/icons inside */
+        }
+
+        /* Make links clearly visible */
+        header .container .intro-section a,
+        header .container .intro-section a * {
+          color: #0b2440 !important;
+          text-decoration: underline !important;
+        }
+
+        /* If a dark background is applied by other CSS, give the intro-section a light background (optional) */
+        /* Remove or change this if you don't want a boxed look */
+        header .container .intro-section {
+          background: transparent; /* change to #fff if you prefer a light card */
+        }
+
+        /* Ensure lists inherit the text color */
+        header .container .intro-section ul,
+        header .container .intro-section li {
+          color: #111111 !important;
+        }
+
+        /* Small-screen safeguard */
+        @media (max-width: 700px) {
+          header .container .intro-section,
+          header .container .intro-section * {
+            color: #111111 !important;
+          }
         }
