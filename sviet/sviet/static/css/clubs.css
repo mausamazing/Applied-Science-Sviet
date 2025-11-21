@@ -160,6 +160,7 @@
       margin-top: 1rem;
     }
     .member-card {
+        overflow: hidden;
       background: var(--color-bg);
       color: var(--color-surface);
       border-radius: 10px;
